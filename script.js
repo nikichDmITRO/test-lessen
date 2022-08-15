@@ -13,5 +13,42 @@ function muClick() {
   document.querySelector(".out2").innerHTML = sum2;
   document.querySelector(".out3").innerHTML = sum3;
   document.querySelector(".out4").innerHTML = sum4;
-  document.querySelector(".out5").innerHTML = sum5;
+  document.querySelector(".out5").innerHTML = sum5; ///
 }
+
+let arrNumb = [2, 10, 4, 6, 8, 10];
+
+let sum = 0;
+
+for (let i = 0; i < arrNumb.length; i++) {
+  sum = sum + arrNumb[i];
+}
+console.log(arrNumb);
+
+console.log(sum);
+
+let b = arrNumb.reduce((prev, item, index) => {
+  return prev + item;
+}, 0);
+
+console.log(`сумма массива 2 = ${b} `);
+
+arrNumb = [2, 10, 34, 6, 65, 10];
+
+let max = 0;
+for (let i = 0; i < arrNumb.length; i++) {
+  if (arrNumb[i] > max) {
+    max = arrNumb[i];
+  }
+}
+console.log(max);
+
+let c = arrNumb.reduce((prev, item) => {
+  if (prev < item) {
+    return item;
+  } else {
+    return prev;
+  }
+});
+
+console.log(c);
